@@ -4,34 +4,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ZenAlternatives - 免费工具替代品导航</title>
-  <meta name="description" content="ZenAlternatives 是一个多语言免费工具、开源软件、AI工具替代品导航站，帮助你快速发现高质量替代方案。" />
+  <meta name="description" content="ZenAlternatives 是一个多语言免费工具、开源软件、AI工具替代品导航站，支持搜索、分类、收藏、热门排行和工具详情。" />
   <meta name="keywords" content="免费工具,替代品导航,开源替代,AI工具,软件替代,ZenAlternatives" />
   <meta name="theme-color" content="#2563eb" />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.zentools.xyz/alternatives/" />
   <meta property="og:title" content="ZenAlternatives - 免费工具替代品导航" />
-  <meta property="og:description" content="发现免费、开源、在线工具替代品。支持多语言、搜索、分类和工具详情。" />
+  <meta property="og:description" content="发现免费、开源、在线工具替代品。支持多语言、搜索、分类、收藏和工具详情。" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://www.zentools.xyz/logo.png" />
+  <meta property="og:url" content="https://www.zentools.xyz/alternatives/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container">
-      <a class="brand" href="#">
+      <a class="brand" href="./" aria-label="ZenAlternatives Home">
         <span class="brand-icon">Z</span>
         <span>ZenAlternatives</span>
       </a>
       <div class="nav-links">
         <a href="#tools" data-i18n="navTools">工具库</a>
         <a href="#categories" data-i18n="navCategories">分类</a>
+        <a href="#ranking" data-i18n="navRanking">热门排行</a>
+        <a href="#favorites" data-i18n="navFavorites">收藏</a>
         <a href="#submit" data-i18n="navSubmit">提交工具</a>
       </div>
-      <select id="langSelect" class="lang-select" aria-label="Language">
-        <option value="zh">中文</option>
-        <option value="en">English</option>
-        <option value="ja">日本語</option>
-        <option value="vi">Tiếng Việt</option>
-      </select>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        <select id="langSelect" class="lang-select" aria-label="Language">
+          <option value="zh">中文</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="vi">Tiếng Việt</option>
+        </select>
+      </div>
     </nav>
   </header>
 
@@ -79,17 +87,32 @@
       <div id="emptyState" class="empty-state" hidden data-i18n="emptyState">没有找到相关工具。</div>
     </section>
 
+    <section id="ranking" class="section container ranking-section">
+      <div class="section-head row">
+        <div>
+          <h2 data-i18n="rankingTitle">本地热门排行</h2>
+          <p data-i18n="rankingText">根据当前浏览器的点击量自动排序，静态站也能显示热门工具。</p>
+        </div>
+        <button id="resetStats" class="btn ghost small" data-i18n="resetStats">重置统计</button>
+      </div>
+      <div id="rankingList" class="ranking-list"></div>
+    </section>
+
+    <section id="favorites" class="section container favorites-section">
+      <div class="section-head">
+        <h2 data-i18n="favoritesTitle">我的收藏</h2>
+        <p data-i18n="favoritesText">收藏保存在本机浏览器，不需要数据库。</p>
+      </div>
+      <div id="favoriteGrid" class="tool-grid"></div>
+      <div id="favoriteEmpty" class="empty-state" hidden data-i18n="favoriteEmpty">还没有收藏工具。</div>
+    </section>
+
     <section class="section container compare-section">
       <div class="section-head">
         <h2 data-i18n="compareTitle">适合做 SEO 的页面结构</h2>
         <p data-i18n="compareText">后期可以批量生成 “某工具替代品” 页面，获取搜索流量。</p>
       </div>
-      <div class="seo-grid">
-        <article><strong>ChatGPT Alternatives</strong><span>AI聊天工具替代</span></article>
-        <article><strong>Canva Alternatives</strong><span>设计工具替代</span></article>
-        <article><strong>Notion Alternatives</strong><span>笔记工具替代</span></article>
-        <article><strong>Adobe PDF Alternatives</strong><span>PDF工具替代</span></article>
-      </div>
+      <div class="seo-grid" id="seoGrid"></div>
     </section>
 
     <section id="submit" class="section container submit-box">
@@ -109,10 +132,11 @@
   </footer>
 
   <dialog id="detailDialog" class="dialog">
-    <button class="dialog-close" id="dialogClose">×</button>
+    <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
     <div id="dialogContent"></div>
   </dialog>
 
+  <div id="toast" class="toast" hidden></div>
   <script src="app.js"></script>
 </body>
 </html>
