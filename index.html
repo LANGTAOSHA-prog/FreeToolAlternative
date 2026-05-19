@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZenAlternatives - 免费工具替代品导航</title>
+  <meta name="description" content="ZenAlternatives 是一个多语言免费工具、开源软件、AI工具替代品导航站，帮助你快速发现高质量替代方案。" />
+  <meta name="keywords" content="免费工具,替代品导航,开源替代,AI工具,软件替代,ZenAlternatives" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="canonical" href="https://www.zentools.xyz/alternatives/" />
+  <meta property="og:title" content="ZenAlternatives - 免费工具替代品导航" />
+  <meta property="og:description" content="发现免费、开源、在线工具替代品。支持多语言、搜索、分类和工具详情。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.zentools.xyz/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#">
+        <span class="brand-icon">Z</span>
+        <span>ZenAlternatives</span>
+      </a>
+      <div class="nav-links">
+        <a href="#tools" data-i18n="navTools">工具库</a>
+        <a href="#categories" data-i18n="navCategories">分类</a>
+        <a href="#submit" data-i18n="navSubmit">提交工具</a>
+      </div>
+      <select id="langSelect" class="lang-select" aria-label="Language">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+        <option value="vi">Tiếng Việt</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <div class="eyebrow" data-i18n="eyebrow">免费 · 开源 · 在线工具替代品</div>
+        <h1 data-i18n="heroTitle">发现更便宜、更好用的工具替代方案</h1>
+        <p data-i18n="heroText">搜索 AI、设计、办公、开发、视频、图片、PDF、SEO 等工具，快速找到免费或开源替代品。</p>
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="搜索工具，例如 ChatGPT、Canva、PDF、Notion" data-i18n-placeholder="searchPlaceholder" />
+          <button id="clearBtn" data-i18n="clearBtn">清空</button>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#tools" data-i18n="browseBtn">浏览工具</a>
+          <a class="btn ghost" href="#submit" data-i18n="submitBtn">提交工具</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="score">98%</div>
+        <p data-i18n="heroCardText">更快找到替代方案，节省时间和订阅费用。</p>
+        <div class="mini-tags">
+          <span>AI</span><span>PDF</span><span>SEO</span><span>Design</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="section container">
+      <div class="section-head">
+        <h2 data-i18n="categoryTitle">热门分类</h2>
+        <p data-i18n="categoryText">按使用场景快速筛选工具。</p>
+      </div>
+      <div id="categoryGrid" class="category-grid"></div>
+    </section>
+
+    <section id="tools" class="section container">
+      <div class="section-head row">
+        <div>
+          <h2 data-i18n="toolTitle">精选替代工具</h2>
+          <p data-i18n="toolText">静态数据，可直接修改 tools 数组扩展内容。</p>
+        </div>
+        <div class="filter-tabs" id="filterTabs"></div>
+      </div>
+      <div id="toolGrid" class="tool-grid"></div>
+      <div id="emptyState" class="empty-state" hidden data-i18n="emptyState">没有找到相关工具。</div>
+    </section>
+
+    <section class="section container compare-section">
+      <div class="section-head">
+        <h2 data-i18n="compareTitle">适合做 SEO 的页面结构</h2>
+        <p data-i18n="compareText">后期可以批量生成 “某工具替代品” 页面，获取搜索流量。</p>
+      </div>
+      <div class="seo-grid">
+        <article><strong>ChatGPT Alternatives</strong><span>AI聊天工具替代</span></article>
+        <article><strong>Canva Alternatives</strong><span>设计工具替代</span></article>
+        <article><strong>Notion Alternatives</strong><span>笔记工具替代</span></article>
+        <article><strong>Adobe PDF Alternatives</strong><span>PDF工具替代</span></article>
+      </div>
+    </section>
+
+    <section id="submit" class="section container submit-box">
+      <div>
+        <h2 data-i18n="submitTitle">提交你的工具</h2>
+        <p data-i18n="submitText">静态版可先跳转邮箱或表单。后期可接入数据库、审核后台和付费置顶。</p>
+      </div>
+      <a class="btn primary" href="mailto:hello@zentools.xyz?subject=Submit%20Tool%20to%20ZenAlternatives" data-i18n="submitEmail">邮件提交</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ZenAlternatives. All rights reserved.</p>
+      <p data-i18n="footerText">Built for useful tools discovery.</p>
+    </div>
+  </footer>
+
+  <dialog id="detailDialog" class="dialog">
+    <button class="dialog-close" id="dialogClose">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
