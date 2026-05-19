@@ -1,9 +1,8 @@
-OK index.html: True
-OK style.css: True
-OK app.js: True
-OK tools-data.js: True
-OK sitemap.xml: True
-OK robots.txt: True
-OK UPLOAD_GUIDE.txt: True
-OK pages count: 22
-Tip text removed: OK
+检查报告：
+- 首页包含顶部主导航。
+- 首页包含侧边栏分类菜单。
+- 首页支持中文/英文/日语/越南语切换。
+- 工具卡片全部带 Visit Website 官网链接。
+- 删除了测试提示 Tip 文案。
+- /pages/ 页面使用 ../style.css 和 ../app.js 路径。
+- sitemap.xml 已包含首页和 22 个专题页面。

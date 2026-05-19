@@ -1,38 +1,106 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FreeToolAlternative - Free & Open Source Alternatives</title>
-<meta name="description" content="Find free and open-source alternatives to popular AI, design, video, PDF and productivity tools.">
-<link rel="canonical" href="https://langtaosha-prog.github.io/FreeToolAlternative/">
-<meta property="og:title" content="FreeToolAlternative">
-<meta property="og:description" content="Free and open-source alternative tools directory.">
-<link rel="stylesheet" href="style.css">
-<script src="tools-data.js"></script>
-<script defer src="app.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FreeToolAlternative - Free & Open Source Tool Alternatives</title>
+  <meta name="description" content="Find free, open-source and privacy-friendly alternatives to popular AI, design, video, writing, PDF and productivity tools." />
+  <link rel="canonical" href="https://langtaosha-prog.github.io/FreeToolAlternative/" />
+  <meta property="og:title" content="FreeToolAlternative" />
+  <meta property="og:description" content="A practical directory of free and open-source alternatives, with filters, categories, recommendations and official links." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://langtaosha-prog.github.io/FreeToolAlternative/" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="nav"><div class="container nav-inner">
-<a class="brand" href="./"><span class="logo"></span><span data-i18n="brand">FreeToolAlternative</span></a>
-<nav class="links"><a href="./" data-i18n="nav_home">Home</a><a href="#tools" data-i18n="nav_tools">Tools</a><a href="#pages" data-i18n="nav_pages">SEO Pages</a><a href="#about" data-i18n="nav_about">About</a></nav>
-<div class="actions"><select id="langSelect" class="lang"><option value="zh">中文</option><option value="en">English</option><option value="ja">日本語</option><option value="vi">Tiếng Việt</option></select></div>
-</div></header>
-<main>
-<section class="hero container">
-<span class="badge" data-i18n="hero_badge">Free · Open Source · Alternative Tools</span>
-<h1 data-i18n="hero_title">Find free and open-source alternatives to popular tools</h1>
-<p data-i18n="hero_desc">Discover better, cheaper, privacy-friendly alternatives to ChatGPT, Canva, CapCut, Notion, Gemini, Midjourney and more.</p>
-<div class="searchbox"><input id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="Search tools or keywords"><button class="btn" data-i18n="nav_tools">Tools</button></div>
-</section>
-<section class="section container" id="tools">
-<div class="section-head"><h2 data-i18n="featured">Featured Alternative Pages</h2></div>
-<div class="grid" id="cards"></div>
-<p id="empty" class="lead" style="display:none" data-i18n="no_results">No related pages found</p>
-</section>
-<section class="section container" id="about">
-<div class="card"><h2 data-i18n="nav_about">About</h2><p data-i18n="footer">A static multilingual template for SEO traffic sites, tool directories and personal web projects.</p></div>
-</section>
-</main>
-<footer class="footer"><div class="container"><span data-i18n="footer">A static multilingual template for SEO traffic sites, tool directories and personal web projects.</span></div></footer>
-</body></html>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="logo">FTA</span><span>FreeToolAlternative</span></a>
+    <nav class="topnav">
+      <a href="#featured" data-i18n="navFeatured">精选推荐</a>
+      <a href="#categories" data-i18n="navCategories">分类</a>
+      <a href="#pages" data-i18n="navPages">专题页面</a>
+      <a href="#submit" data-i18n="navSubmit">提交工具</a>
+    </nav>
+    <div class="lang-switch" aria-label="Language switcher">
+      <button data-lang="zh" class="active">中</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ja">日</button>
+      <button data-lang="vi">VI</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" aria-label="Category menu">
+      <div class="side-title" data-i18n="sideTitle">分类菜单</div>
+      <button class="cat-btn active" data-category="all" data-i18n="allTools">全部工具</button>
+      <button class="cat-btn" data-category="AI">AI 工具</button>
+      <button class="cat-btn" data-category="Design" data-i18n="catDesign">设计工具</button>
+      <button class="cat-btn" data-category="Video" data-i18n="catVideo">视频工具</button>
+      <button class="cat-btn" data-category="Writing" data-i18n="catWriting">写作工具</button>
+      <button class="cat-btn" data-category="PDF">PDF 工具</button>
+      <button class="cat-btn" data-category="Productivity" data-i18n="catProductivity">效率工具</button>
+      <button class="cat-btn" data-category="Translation" data-i18n="catTranslation">翻译工具</button>
+      <div class="side-note" data-i18n="sideNote">每个工具均带官网链接、类型标签和推荐理由。</div>
+    </aside>
+
+    <section class="content">
+      <section class="hero">
+        <div>
+          <p class="eyebrow" data-i18n="eyebrow">免费 / 开源 / 可替代</p>
+          <h1 data-i18n="heroTitle">查找热门工具的免费开源替代方案</h1>
+          <p class="hero-text" data-i18n="heroText">不再只是链接目录。这里提供分类筛选、推荐理由、官网入口、适合人群和更新提示，帮你更快找到真正能用的替代工具。</p>
+          <div class="search-wrap">
+            <input id="searchInput" type="search" placeholder="搜索 ChatGPT、Canva、PDF、Video..." />
+          </div>
+          <div class="hero-actions">
+            <a class="primary" href="#featured" data-i18n="startExplore">开始浏览</a>
+            <a class="secondary" href="#submit" data-i18n="submitTool">提交工具</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="score">22+</div>
+          <p data-i18n="heroCardText">专题页面已准备，可继续扩展到 100+ SEO 页面。</p>
+          <div class="badge-row">
+            <span>Open Source</span><span>Free</span><span>SEO</span><span>Multilingual</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="notice">
+        <strong data-i18n="qualityTitle">内容质量说明：</strong>
+        <span data-i18n="qualityText">工具信息会变化，请以官网为准。本站优先展示有官网、免费层、开源或隐私友好的项目，并持续更新。</span>
+      </section>
+
+      <section id="featured" class="section">
+        <div class="section-head">
+          <h2 data-i18n="featuredTitle">精选替代工具</h2>
+          <p data-i18n="featuredText">可按分类或关键词筛选，每个卡片都能直接打开官网。</p>
+        </div>
+        <div id="toolGrid" class="grid"></div>
+      </section>
+
+      <section id="categories" class="section">
+        <div class="section-head"><h2 data-i18n="categoriesTitle">分类导航</h2></div>
+        <div id="categoryGrid" class="category-grid"></div>
+      </section>
+
+      <section id="pages" class="section">
+        <div class="section-head">
+          <h2 data-i18n="pagesTitle">SEO 专题页面</h2>
+          <p data-i18n="pagesText">进入子页面查看更完整的替代品列表、FAQ 和推荐说明。</p>
+        </div>
+        <div id="pageGrid" class="page-grid"></div>
+      </section>
+
+      <section id="submit" class="section submit-box">
+        <h2 data-i18n="submitTitle">提交免费/开源工具</h2>
+        <p data-i18n="submitText">你可以把工具名称、官网、类型和推荐理由发给站长，后续加入审核系统。</p>
+        <a class="primary" href="mailto:taojiangtj@gmail.com?subject=Submit%20a%20tool%20to%20FreeToolAlternative" data-i18n="emailSubmit">邮件提交</a>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 FreeToolAlternative · Updated static version</footer>
+  <script src="app.js"></script>
+</body>
+</html>

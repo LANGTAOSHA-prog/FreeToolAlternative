@@ -1,31 +1,30 @@
-
-function getLang(){return localStorage.getItem('fta_lang') || (navigator.language||'en').slice(0,2).replace('zh','zh').replace('ja','ja').replace('vi','vi') || 'en'}
-function t(k){const lang=getLang();return (I18N[lang]||I18N.en)[k]||I18N.en[k]||k}
-function applyI18n(){
-  document.documentElement.lang=getLang();
-  document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n)})
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{el.placeholder=t(el.dataset.i18nPlaceholder)})
-  const sel=document.querySelector('#langSelect'); if(sel) sel.value=getLang();
-}
-function setLang(lang){localStorage.setItem('fta_lang',lang); applyI18n(); renderCards && renderCards();}
-function cardHTML(tool){
- const desc = `${tool.title} · ${t('category')}: ${tool.category}`;
- return `<article class="card" data-title="${tool.title.toLowerCase()} ${tool.category.toLowerCase()} ${tool.items.join(' ').toLowerCase()}">
-   <h3>${tool.title}</h3>
-   <div class="meta"><span class="tag">${tool.category}</span><span class="tag">Free</span><span class="tag">Open Source</span></div>
-   <p>${desc}</p>
-   <a class="open" href="pages/${tool.slug}.html">${t('open')} →</a>
- </article>`;
-}
-function renderCards(){
- const wrap=document.querySelector('#cards'); if(!wrap) return;
- wrap.innerHTML=SITE_TOOLS.map(cardHTML).join('');
- filterCards();
-}
-function filterCards(){
- const q=(document.querySelector('#searchInput')?.value||'').trim().toLowerCase();
- const cards=[...document.querySelectorAll('.card')]; let count=0;
- cards.forEach(c=>{const ok=!q || c.dataset.title.includes(q); c.style.display=ok?'block':'none'; if(ok) count++;});
- const empty=document.querySelector('#empty'); if(empty) empty.style.display=count?'none':'block';
-}
-document.addEventListener('DOMContentLoaded',()=>{applyI18n();renderCards();document.querySelector('#searchInput')?.addEventListener('input',filterCards);document.querySelector('#langSelect')?.addEventListener('change',e=>setLang(e.target.value));});
+const translations={zh:{navFeatured:'精选推荐',navCategories:'分类',navPages:'专题页面',navSubmit:'提交工具',sideTitle:'分类菜单',allTools:'全部工具',catDesign:'设计工具',catVideo:'视频工具',catWriting:'写作工具',catProductivity:'效率工具',catTranslation:'翻译工具',sideNote:'每个工具均带官网链接、类型标签和推荐理由。',eyebrow:'免费 / 开源 / 可替代',heroTitle:'查找热门工具的免费开源替代方案',heroText:'不再只是链接目录。这里提供分类筛选、推荐理由、官网入口、适合人群和更新提示，帮你更快找到真正能用的替代工具。',startExplore:'开始浏览',submitTool:'提交工具',heroCardText:'专题页面已准备，可继续扩展到 100+ SEO 页面。',qualityTitle:'内容质量说明：',qualityText:'工具信息会变化，请以官网为准。本站优先展示有官网、免费层、开源或隐私友好的项目，并持续更新。',featuredTitle:'精选替代工具',featuredText:'可按分类或关键词筛选，每个卡片都能直接打开官网。',categoriesTitle:'分类导航',pagesTitle:'SEO 专题页面',pagesText:'进入子页面查看更完整的替代品列表、FAQ 和推荐说明。',submitTitle:'提交免费/开源工具',submitText:'你可以把工具名称、官网、类型和推荐理由发给站长，后续加入审核系统。',emailSubmit:'邮件提交',visit:'打开官网'},en:{navFeatured:'Featured',navCategories:'Categories',navPages:'SEO Pages',navSubmit:'Submit',sideTitle:'Category Menu',allTools:'All Tools',catDesign:'Design',catVideo:'Video',catWriting:'Writing',catProductivity:'Productivity',catTranslation:'Translation',sideNote:'Every tool includes an official link, type tag and recommendation reason.',eyebrow:'Free / Open Source / Alternatives',heroTitle:'Find free and open-source alternatives to popular tools',heroText:'More than a directory. Browse by category, search by need, read reasons, visit official websites and check update notes faster.',startExplore:'Start Exploring',submitTool:'Submit Tool',heroCardText:'SEO topic pages are ready and can scale to 100+ pages.',qualityTitle:'Quality note:',qualityText:'Tool information changes quickly. Please confirm details on official websites. We prioritize tools with official links, free tiers, open-source or privacy-friendly features.',featuredTitle:'Featured Alternatives',featuredText:'Filter by category or keyword. Every card opens the official website.',categoriesTitle:'Categories',pagesTitle:'SEO Topic Pages',pagesText:'Open topic pages for full alternative lists, FAQ and recommendation notes.',submitTitle:'Submit a free/open-source tool',submitText:'Send the tool name, official website, type and reason to the site owner. Review system can be added later.',emailSubmit:'Submit by Email',visit:'Visit Website'},ja:{navFeatured:'おすすめ',navCategories:'カテゴリ',navPages:'SEOページ',navSubmit:'投稿',sideTitle:'カテゴリメニュー',allTools:'すべて',catDesign:'デザイン',catVideo:'動画',catWriting:'文章作成',catProductivity:'効率化',catTranslation:'翻訳',sideNote:'各ツールには公式リンク、種類、推薦理由があります。',eyebrow:'無料 / オープンソース / 代替',heroTitle:'人気ツールの無料・オープンソース代替を探す',heroText:'単なるリンク集ではありません。カテゴリ、検索、推薦理由、公式サイトリンク、更新注意をまとめています。',startExplore:'見る',submitTool:'ツールを投稿',heroCardText:'SEOページを準備済み。100ページ以上へ拡張可能です。',qualityTitle:'品質メモ：',qualityText:'ツール情報は変わります。詳細は公式サイトで確認してください。無料枠、オープンソース、プライバシー重視のツールを優先します。',featuredTitle:'おすすめ代替ツール',featuredText:'カテゴリやキーワードで絞り込み。すべて公式サイトへリンクします。',categoriesTitle:'カテゴリナビ',pagesTitle:'SEO特集ページ',pagesText:'子ページで詳しい代替リスト、FAQ、推薦理由を確認できます。',submitTitle:'無料/OSSツールを投稿',submitText:'ツール名、公式サイト、種類、推薦理由を送ってください。',emailSubmit:'メールで投稿',visit:'公式サイト'},vi:{navFeatured:'Đề xuất',navCategories:'Danh mục',navPages:'Trang SEO',navSubmit:'Gửi công cụ',sideTitle:'Menu danh mục',allTools:'Tất cả',catDesign:'Thiết kế',catVideo:'Video',catWriting:'Viết',catProductivity:'Năng suất',catTranslation:'Dịch thuật',sideNote:'Mỗi công cụ có liên kết chính thức, loại và lý do đề xuất.',eyebrow:'Miễn phí / Mã nguồn mở / Thay thế',heroTitle:'Tìm công cụ thay thế miễn phí và mã nguồn mở',heroText:'Không chỉ là danh sách liên kết. Bạn có thể lọc theo danh mục, tìm kiếm, xem lý do đề xuất và mở website chính thức.',startExplore:'Bắt đầu',submitTool:'Gửi công cụ',heroCardText:'Các trang SEO đã sẵn sàng và có thể mở rộng lên 100+ trang.',qualityTitle:'Ghi chú chất lượng:',qualityText:'Thông tin công cụ thay đổi nhanh. Hãy kiểm tra trên website chính thức. Chúng tôi ưu tiên công cụ có link chính thức, miễn phí, mã nguồn mở hoặc bảo mật tốt.',featuredTitle:'Công cụ thay thế nổi bật',featuredText:'Lọc theo danh mục hoặc từ khóa. Mỗi thẻ đều mở website chính thức.',categoriesTitle:'Danh mục',pagesTitle:'Trang chủ đề SEO',pagesText:'Mở trang con để xem danh sách thay thế, FAQ và ghi chú đề xuất.',submitTitle:'Gửi công cụ miễn phí/mã nguồn mở',submitText:'Gửi tên công cụ, website chính thức, loại và lý do đề xuất cho chủ site.',emailSubmit:'Gửi qua email',visit:'Mở website'}};
+const tools=[
+{name:'Jan',cat:'AI',type:'Open Source',url:'https://jan.ai/',reason:'Local AI chat app and open-source ChatGPT alternative.'},
+{name:'Open WebUI',cat:'AI',type:'Open Source',url:'https://openwebui.com/',reason:'Self-hosted AI chat interface for Ollama and other models.'},
+{name:'LibreChat',cat:'AI',type:'Open Source',url:'https://www.librechat.ai/',reason:'Multi-model AI chat platform for teams and self-hosting.'},
+{name:'HuggingChat',cat:'AI',type:'Free',url:'https://huggingface.co/chat/',reason:'Free AI chat experience from Hugging Face.'},
+{name:'Penpot',cat:'Design',type:'Open Source',url:'https://penpot.app/',reason:'Open-source design and prototyping alternative for teams.'},
+{name:'Photopea',cat:'Design',type:'Free',url:'https://www.photopea.com/',reason:'Browser-based image editor with PSD support.'},
+{name:'GIMP',cat:'Design',type:'Open Source',url:'https://www.gimp.org/',reason:'Powerful open-source image editor.'},
+{name:'Kdenlive',cat:'Video',type:'Open Source',url:'https://kdenlive.org/',reason:'Professional open-source video editor.'},
+{name:'Shotcut',cat:'Video',type:'Open Source',url:'https://shotcut.org/',reason:'Cross-platform free and open-source video editing.'},
+{name:'OpenShot',cat:'Video',type:'Open Source',url:'https://www.openshot.org/',reason:'Easy video editor suitable for beginners.'},
+{name:'LanguageTool',cat:'Writing',type:'Freemium / Open Source',url:'https://languagetool.org/',reason:'Grammar and writing assistant for multiple languages.'},
+{name:'Hemingway Editor',cat:'Writing',type:'Free / Paid',url:'https://hemingwayapp.com/',reason:'Improves English readability and concise writing.'},
+{name:'Stirling PDF',cat:'PDF',type:'Open Source',url:'https://www.stirlingpdf.com/',reason:'All-in-one self-hosted PDF toolbox.'},
+{name:'PDFgear',cat:'PDF',type:'Free',url:'https://www.pdfgear.com/',reason:'Free PDF editor, converter, compressor and merger.'},
+{name:'AppFlowy',cat:'Productivity',type:'Open Source',url:'https://www.appflowy.io/',reason:'Open-source Notion alternative for notes and databases.'},
+{name:'AFFiNE',cat:'Productivity',type:'Open Source',url:'https://affine.pro/',reason:'Docs, whiteboard and knowledge base in one workspace.'},
+{name:'LibreTranslate',cat:'Translation',type:'Open Source',url:'https://libretranslate.com/',reason:'Free and open-source machine translation API.'},
+{name:'Argos Translate',cat:'Translation',type:'Open Source',url:'https://www.argosopentech.com/',reason:'Offline open-source translation engine.'}
+];
+const pages=['chatgpt-alternative','canva-alternative','capcut-alternative','notion-alternative','free-ai-tools','best-ai-tools-2026','free-pdf-tools','ai-image-tools','ai-video-tools','free-online-tools','grammarly-alternative','photoshop-alternative','figma-alternative','google-translate-alternative','youtube-downloader-tools','claude-alternative','gemini-alternative','midjourney-alternative','tiktok-downloader-tools','ai-resume-tools','ai-voice-tools','ai-music-tools'];
+let currentLang=localStorage.getItem('lang')||'zh',currentCat='all';
+function t(k){return translations[currentLang][k]||translations.en[k]||k}
+function applyLang(){document.documentElement.lang=currentLang==='zh'?'zh-CN':currentLang;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(t(key))el.textContent=t(key)});document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.toggle('active',b.dataset.lang===currentLang));renderTools();}
+function renderTools(){const q=(document.getElementById('searchInput')?.value||'').toLowerCase();const grid=document.getElementById('toolGrid');if(!grid)return;grid.innerHTML='';tools.filter(x=>(currentCat==='all'||x.cat===currentCat)&&(`${x.name} ${x.cat} ${x.type} ${x.reason}`.toLowerCase().includes(q))).forEach(x=>{grid.insertAdjacentHTML('beforeend',`<article class="card"><h3>${x.name}</h3><div class="meta"><span class="tag">${x.cat}</span><span class="tag">${x.type}</span></div><p class="reason">${x.reason}</p><a class="visit" href="${x.url}" target="_blank" rel="noopener noreferrer">${t('visit')}</a></article>`)});}
+function renderCategories(){const cats=[['AI','AI Tools'],['Design','Design Tools'],['Video','Video Tools'],['Writing','Writing Tools'],['PDF','PDF Tools'],['Productivity','Productivity Tools'],['Translation','Translation Tools']];const box=document.getElementById('categoryGrid');if(!box)return;box.innerHTML=cats.map(c=>`<button class="category-card cat-btn" data-category="${c[0]}"><h3>${c[1]}</h3><p>${tools.filter(t=>t.cat===c[0]).length} tools</p></button>`).join('');}
+function renderPages(){const box=document.getElementById('pageGrid');if(!box)return;box.innerHTML=pages.map(p=>`<a class="page-card" href="pages/${p}.html"><h3>${p.split('-').map(w=>w[0].toUpperCase()+w.slice(1)).join(' ')}</h3><p>Alternative tools, official links, FAQ and SEO content.</p></a>`).join('');}
+document.addEventListener('click',e=>{const cat=e.target.closest('[data-category]');if(cat){currentCat=cat.dataset.category;document.querySelectorAll('[data-category]').forEach(b=>b.classList.toggle('active',b.dataset.category===currentCat));renderTools();}const lang=e.target.closest('[data-lang]');if(lang){currentLang=lang.dataset.lang;localStorage.setItem('lang',currentLang);applyLang();}});
+document.getElementById('searchInput')?.addEventListener('input',renderTools);renderCategories();renderPages();applyLang();
