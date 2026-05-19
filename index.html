@@ -1,7 +1,38 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>FreeToolAlternative SEO Pages</title><meta name='description' content='Free and open-source alternative tools directory.'><link rel='stylesheet' href='style.css'></head><body><div class='wrap'><nav class='nav'><div class='logo'>FreeTool<span>Alternative</span></div><div class='links'><a href='pages/claude-alternative.html'>Claude</a><a href='pages/gemini-alternative.html'>Gemini</a><a href='pages/midjourney-alternative.html'>Midjourney</a></div></nav><section class='hero'><h1>SEO Alternative Pages Pack</h1><p>多语言 SEO 页面包：Claude、Gemini、Midjourney、TikTok Downloader、AI Resume、AI Voice、AI Music。</p></section><div class='grid'><a class='card' href='pages/claude-alternative.html'><h3>Claude Alternative</h3><p class='muted'>Claude 替代工具 / Claude 代替ツール / Claude thay thế</p></a>
-<a class='card' href='pages/gemini-alternative.html'><h3>Gemini Alternative</h3><p class='muted'>Gemini 替代工具 / Gemini 代替ツール / Gemini thay thế</p></a>
-<a class='card' href='pages/midjourney-alternative.html'><h3>Midjourney Alternative</h3><p class='muted'>Midjourney 替代工具 / Midjourney 代替ツール / Midjourney thay thế</p></a>
-<a class='card' href='pages/tiktok-downloader.html'><h3>TikTok Downloader Tools</h3><p class='muted'>TikTok 下载工具 / TikTok ダウンロードツール / Công cụ tải TikTok</p></a>
-<a class='card' href='pages/ai-resume-tools.html'><h3>AI Resume Tools</h3><p class='muted'>AI 简历工具 / AI 履歴書ツール / Công cụ CV AI</p></a>
-<a class='card' href='pages/ai-voice-tools.html'><h3>AI Voice Tools</h3><p class='muted'>AI 语音工具 / AI 音声ツール / Công cụ giọng nói AI</p></a>
-<a class='card' href='pages/ai-music-tools.html'><h3>AI Music Tools</h3><p class='muted'>AI 音乐工具 / AI 音楽ツール / Công cụ âm nhạc AI</p></a></div><footer class='footer'>Upload all files to your GitHub Pages repository. Put HTML pages inside /pages/.</footer></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FreeToolAlternative - Free & Open Source Alternatives</title>
+<meta name="description" content="Find free and open-source alternatives to popular AI, design, video, PDF and productivity tools.">
+<link rel="canonical" href="https://langtaosha-prog.github.io/FreeToolAlternative/">
+<meta property="og:title" content="FreeToolAlternative">
+<meta property="og:description" content="Free and open-source alternative tools directory.">
+<link rel="stylesheet" href="style.css">
+<script src="tools-data.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="nav"><div class="container nav-inner">
+<a class="brand" href="./"><span class="logo"></span><span data-i18n="brand">FreeToolAlternative</span></a>
+<nav class="links"><a href="./" data-i18n="nav_home">Home</a><a href="#tools" data-i18n="nav_tools">Tools</a><a href="#pages" data-i18n="nav_pages">SEO Pages</a><a href="#about" data-i18n="nav_about">About</a></nav>
+<div class="actions"><select id="langSelect" class="lang"><option value="zh">中文</option><option value="en">English</option><option value="ja">日本語</option><option value="vi">Tiếng Việt</option></select></div>
+</div></header>
+<main>
+<section class="hero container">
+<span class="badge" data-i18n="hero_badge">Free · Open Source · Alternative Tools</span>
+<h1 data-i18n="hero_title">Find free and open-source alternatives to popular tools</h1>
+<p data-i18n="hero_desc">Discover better, cheaper, privacy-friendly alternatives to ChatGPT, Canva, CapCut, Notion, Gemini, Midjourney and more.</p>
+<div class="searchbox"><input id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="Search tools or keywords"><button class="btn" data-i18n="nav_tools">Tools</button></div>
+</section>
+<section class="section container" id="tools">
+<div class="section-head"><h2 data-i18n="featured">Featured Alternative Pages</h2></div>
+<div class="grid" id="cards"></div>
+<p id="empty" class="lead" style="display:none" data-i18n="no_results">No related pages found</p>
+</section>
+<section class="section container" id="about">
+<div class="card"><h2 data-i18n="nav_about">About</h2><p data-i18n="footer">A static multilingual template for SEO traffic sites, tool directories and personal web projects.</p></div>
+</section>
+</main>
+<footer class="footer"><div class="container"><span data-i18n="footer">A static multilingual template for SEO traffic sites, tool directories and personal web projects.</span></div></footer>
+</body></html>

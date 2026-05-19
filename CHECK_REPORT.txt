@@ -1,0 +1,9 @@
+OK index.html: True
+OK style.css: True
+OK app.js: True
+OK tools-data.js: True
+OK sitemap.xml: True
+OK robots.txt: True
+OK UPLOAD_GUIDE.txt: True
+OK pages count: 22
+Tip text removed: OK

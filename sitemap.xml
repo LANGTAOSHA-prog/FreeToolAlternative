@@ -1,119 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/chatgpt-alternative.html</loc>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/canva-alternative.html</loc>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/capcut-alternative.html</loc>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/notion-alternative.html</loc>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/free-ai-tools.html</loc>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/best-ai-tools-2026.html</loc>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/free-pdf-tools.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/ai-image-tools.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/ai-video-tools.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/free-online-tools.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/grammarly-alternative.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/photoshop-alternative.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/figma-alternative.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/google-translate-alternative.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/youtube-downloader-tools.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/claude-alternative.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/gemini-alternative.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/midjourney-alternative.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/tiktok-downloader-tools.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/ai-resume-tools.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/ai-voice-tools.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/ai-music-tools.html</loc>
-    <priority>0.80</priority>
-  </url>
-
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/</loc><priority>1.00</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/chatgpt-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/canva-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/capcut-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/notion-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/claude-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/gemini-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/midjourney-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/free-ai-tools.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/best-ai-tools-2026.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/free-pdf-tools.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/ai-image-tools.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/ai-video-tools.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/free-online-tools.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/grammarly-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/photoshop-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/figma-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/google-translate-alternative.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/youtube-downloader-tools.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/tiktok-downloader-tools.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/ai-resume-tools.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/ai-voice-tools.html</loc><priority>0.85</priority></url>
+  <url><loc>https://langtaosha-prog.github.io/FreeToolAlternative/pages/ai-music-tools.html</loc><priority>0.85</priority></url>
 </urlset>
