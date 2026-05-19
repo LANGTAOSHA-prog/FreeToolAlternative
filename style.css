@@ -6,3 +6,5 @@
 
 /* Stage 3 SEO landing pages */
 .seo-hero{padding:86px 0 42px}.seo-hero h1{max-width:900px}.seo-hero p{font-size:19px;color:var(--muted);line-height:1.8;max-width:760px}.seo-tool .tool-logo{margin-bottom:10px}.faq-list{display:grid;gap:12px}.faq-item{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 8px 30px rgba(15,23,42,.04)}.faq-item summary{cursor:pointer;font-weight:900}.faq-item p{margin:12px 0 0;color:var(--muted);line-height:1.8}.seo-links{display:flex;gap:12px;flex-wrap:wrap}.seo-link{display:inline-flex;padding:12px 16px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font-weight:900;color:var(--primary)}
+
+.seo-card-link{display:block;color:inherit}.seo-card-link article{height:100%;transition:.2s}.seo-card-link article:hover{transform:translateY(-3px);box-shadow:var(--shadow)}

@@ -79,8 +79,8 @@ function renderRanking(){
   $('#rankingList').innerHTML=ranked.map((tool,i)=>`<article class="ranking-item"><div class="rank-no">${i+1}</div><div><strong>${tool.name}</strong><span>${tool.alt} · ${stats[tool.slug]||0} ${t('clicks')}</span></div><button class="small-btn" onclick="openDetail('${tool.slug}')">${t('details')}</button></article>`).join('');
 }
 function renderSeoGrid(){
-  const items=[['ChatGPT Alternatives','AI聊天工具替代'],['Canva Alternatives','设计工具替代'],['Notion Alternatives','笔记工具替代'],['Adobe PDF Alternatives','PDF工具替代']];
-  $('#seoGrid').innerHTML=items.map(x=>`<article><strong>${x[0]}</strong><span>${x[1]}</span></article>`).join('');
+  const items=[['pages/chatgpt-alternative.html','ChatGPT Alternative','ChatGPT 替代品'],['pages/canva-alternative.html','Canva Alternative','Canva 替代品'],['pages/capcut-alternative.html','CapCut Alternative','CapCut 替代品'],['pages/notion-alternative.html','Notion Alternative','Notion 替代品'],['pages/free-ai-tools.html','Free AI Tools','免费 AI 工具'],['pages/best-ai-tools-2026.html','Best AI Tools 2026','2026 年最佳 AI 工具'],['pages/free-pdf-tools.html','Free PDF Tools','免费 PDF 工具'],['pages/ai-image-tools.html','AI Image Tools','AI 图片工具'],['pages/ai-video-tools.html','AI Video Tools','AI 视频工具'],['pages/free-online-tools.html','Free Online Tools','免费在线工具'],['pages/grammarly-alternative.html','Grammarly Alternative','Grammarly 替代品'],['pages/photoshop-alternative.html','Photoshop Alternative','Photoshop 替代品'],['pages/figma-alternative.html','Figma Alternative','Figma 替代品'],['pages/google-translate-alternative.html','Google Translate Alternative','Google 翻译替代品'],['pages/youtube-downloader-tools.html','YouTube Video Downloader Tools','YouTube 视频下载工具']];
+  $('#seoGrid').innerHTML=items.map(x=>`<a class="seo-card-link" href="${x[0]}"><article><strong>${x[1]}</strong><span>${x[2]}</span></article></a>`).join('');
 }
 
 window.openDetail=function(slug){
