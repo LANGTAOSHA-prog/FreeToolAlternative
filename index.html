@@ -1,107 +1,39 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FreeToolAlternative - 免费开源工具与软件平替导航</title>
-  <meta name="description" content="FreeToolAlternative 专注整理全网免费开源工具、付费软件优质平替，涵盖AI、设计、视频剪辑、PDF处理、办公效率、翻译编程等工具。" />
-  <link rel="canonical" href="https://langtaosha-prog.github.io/FreeToolAlternative/" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreeToolAlternative - Free Open Source Alternatives</title>
+  <meta name="description" content="FreeToolAlternative collects free and open-source alternatives for AI, design, PDF, video, writing, translation and productivity tools.">
+  <link rel="canonical" href="https://langtaosha-prog.github.io/FreeToolAlternative/">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="./">FreeToolAlternative</a>
-    <nav class="topnav">
-      <a href="#top10">热门工具</a>
-      <a href="#latest">近期上新</a>
-      <a href="#categories">分类</a>
-      <a href="#submit">提交工具</a>
-    </nav>
-    <div class="lang-switch">
-      <button data-lang="zh" class="active">中文</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="ja">日本語</button>
-      <button data-lang="vi">VI</button>
-    </div>
-  </header>
-
-  <main class="layout">
-    <aside class="sidebar">
-      <h3 data-i18n="sideTitle">分类菜单</h3>
-      <a href="#ai">AI智能工具</a>
-      <a href="#design">平面设计工具</a>
-      <a href="#video">视频剪辑工具</a>
-      <a href="#pdf">PDF办公工具</a>
-      <a href="#translate">翻译语言工具</a>
-      <a href="#productivity">效率办公工具</a>
-      <a href="#dev">开源编程工具</a>
-    </aside>
-
-    <section class="content">
-      <section class="hero" id="home">
-        <p class="eyebrow" data-i18n="eyebrow">免费 · 开源 · 高质量平替</p>
-        <h1 data-i18n="heroTitle">全网免费开源工具与付费软件平替大全</h1>
-        <p class="hero-desc" data-i18n="heroDesc">本站专注整理全网免费开源工具、付费软件优质平替，涵盖AI、设计、视频剪辑、PDF处理、办公效率、翻译编程等全品类工具。无需付费、无广告、无捆绑，一站式帮你找到低成本、高性能替代软件，适合学生、上班族、自媒体创作者、开发者日常使用，持续更新优质免费资源。</p>
-        <div class="slogans">
-          <span data-i18n="slogan1">告别付费软件，用好免费开源工具</span>
-          <span data-i18n="slogan2">全网优质工具平替大全，省钱又好用</span>
-          <span data-i18n="slogan3">免费工具一站式导航，高效提升办公效率</span>
-        </div>
-        <div class="search-box">
-          <input id="searchInput" type="search" placeholder="搜索工具：Photopea / PDF / AI / Notion..." />
-        </div>
-      </section>
-
-      <section id="categories" class="section">
-        <h2 data-i18n="catTitle">📂 快速分类直达</h2>
-        <p class="muted" data-i18n="catDesc">AI智能工具 | 平面设计工具 | 视频剪辑工具 | PDF办公工具 | 翻译语言工具 | 效率办公工具 | 开源编程工具</p>
-        <div class="category-grid">
-          <a class="category-card" href="#ai">AI智能工具</a>
-          <a class="category-card" href="#design">平面设计工具</a>
-          <a class="category-card" href="#video">视频剪辑工具</a>
-          <a class="category-card" href="#pdf">PDF办公工具</a>
-          <a class="category-card" href="#translate">翻译语言工具</a>
-          <a class="category-card" href="#productivity">效率办公工具</a>
-          <a class="category-card" href="#dev">开源编程工具</a>
-        </div>
-      </section>
-
-      <section id="top10" class="section">
-        <h2 data-i18n="topTitle">🔥 全站热门工具 TOP10</h2>
-        <div class="tool-grid" id="topTools"></div>
-      </section>
-
-      <section id="latest" class="section highlight">
-        <h2 data-i18n="latestTitle">🆕 近期上新工具</h2>
-        <p data-i18n="latestDesc">持续收录全网最新免费开源软件、热门工具平替，定期更新优质实用资源，每一款都经过实测好用，免费安全无套路。</p>
-        <div class="tool-grid" id="latestTools"></div>
-      </section>
-
-      <section id="pages" class="section">
-        <h2>Alternative Pages</h2>
-        <div class="page-grid">
-          <a href="pages/chatgpt-alternative.html">ChatGPT Alternative</a>
-          <a href="pages/canva-alternative.html">Canva Alternative</a>
-          <a href="pages/capcut-alternative.html">CapCut Alternative</a>
-          <a href="pages/notion-alternative.html">Notion Alternative</a>
-          <a href="pages/gemini-alternative.html">Gemini Alternative</a>
-          <a href="pages/claude-alternative.html">Claude Alternative</a>
-          <a href="pages/midjourney-alternative.html">Midjourney Alternative</a>
-          <a href="pages/free-pdf-tools.html">Free PDF Tools</a>
-        </div>
-      </section>
-
-      <section id="submit" class="section submit-box">
-        <h2 data-i18n="submitTitle">提交优质免费工具</h2>
-        <p data-i18n="submitDesc">如果你发现好用的免费、开源或低成本平替工具，可以通过 GitHub Issue 或邮箱提交，审核后加入网站。</p>
-      </section>
+<header class="topbar">
+  <a class="brand" href="./"><span>◎</span><strong data-title>FreeToolAlternative</strong></a>
+  <nav><a href="#tools">Tools</a><a href="#categories">Categories</a><a href="#submit">Submit</a></nav>
+  <div class="langs"><button class="lang-btn active" data-lang="zh">中文</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="ja">日本語</button><button class="lang-btn" data-lang="vi">VI</button></div>
+</header>
+<main class="layout">
+  <aside class="sidebar" id="categories"><h3>Categories</h3><div id="categoryList"></div></aside>
+  <section class="content">
+    <section class="hero">
+      <p class="eyebrow">Open Source · Free Tools · Software Alternatives</p>
+      <h1 data-title>FreeToolAlternative</h1>
+      <p data-subtitle>免费开源工具与付费软件平替导航</p>
+      <div class="search"><input id="searchInput" type="search" placeholder="搜索工具、分类或关键词"></div>
     </section>
-  </main>
-
-  <footer class="footer">
-    <p data-i18n="footerTrust">本网站为纯免费工具分享导航，所有工具均为官方开源免费项目，无广告、无弹窗、无收费套路。坚持长期稳定更新，为大家带来更多实用优质免费资源。</p>
-    <p>© FreeToolAlternative</p>
-  </footer>
-  <script src="app.js"></script>
+    <section class="panel" id="tools">
+      <div class="section-head"><h2 data-db>数据库动态工具</h2><span id="status">Loading...</span></div>
+      <div id="toolGrid" class="tool-grid"></div>
+    </section>
+    <section class="panel" id="submit">
+      <h2>Submit a Tool</h2>
+      <p>下一步可接入 Firestore submissions 集合，实现用户投稿。当前版本已完成 tools 动态读取。</p>
+    </section>
+  </section>
+</main>
+<footer>FreeToolAlternative · Built with GitHub Pages + Firebase Firestore</footer>
+<script type="module" src="app.js"></script>
 </body>
 </html>

@@ -1,17 +1,76 @@
-const i18n={zh:{sideTitle:'分类菜单',eyebrow:'免费 · 开源 · 高质量平替',heroTitle:'全网免费开源工具与付费软件平替大全',heroDesc:'本站专注整理全网免费开源工具、付费软件优质平替，涵盖AI、设计、视频剪辑、PDF处理、办公效率、翻译编程等全品类工具。无需付费、无广告、无捆绑，一站式帮你找到低成本、高性能替代软件，适合学生、上班族、自媒体创作者、开发者日常使用，持续更新优质免费资源。',slogan1:'告别付费软件，用好免费开源工具',slogan2:'全网优质工具平替大全，省钱又好用',slogan3:'免费工具一站式导航，高效提升办公效率',catTitle:'📂 快速分类直达',catDesc:'AI智能工具 | 平面设计工具 | 视频剪辑工具 | PDF办公工具 | 翻译语言工具 | 效率办公工具 | 开源编程工具',topTitle:'🔥 全站热门工具 TOP10',latestTitle:'🆕 近期上新工具',latestDesc:'持续收录全网最新免费开源软件、热门工具平替，定期更新优质实用资源，每一款都经过实测好用，免费安全无套路。',submitTitle:'提交优质免费工具',submitDesc:'如果你发现好用的免费、开源或低成本平替工具，可以通过 GitHub Issue 或邮箱提交，审核后加入网站。',footerTrust:'本网站为纯免费工具分享导航，所有工具均为官方开源免费项目，无广告、无弹窗、无收费套路。坚持长期稳定更新，为大家带来更多实用优质免费资源。'},en:{sideTitle:'Category Menu',eyebrow:'Free · Open Source · Better Alternatives',heroTitle:'Free and Open Source Alternatives to Popular Paid Tools',heroDesc:'FreeToolAlternative collects free, open-source and low-cost alternatives for AI, design, video editing, PDF, office productivity, translation and developer tools. Find practical software alternatives with lower cost and strong performance for students, creators, office workers and developers.',slogan1:'Replace paid software with free open-source tools',slogan2:'Curated alternatives that save money and work well',slogan3:'One-stop free tools directory for better productivity',catTitle:'📂 Quick Categories',catDesc:'AI tools | Design tools | Video editing tools | PDF tools | Translation tools | Productivity tools | Open-source developer tools',topTitle:'🔥 Popular Tools TOP10',latestTitle:'🆕 Recently Added Tools',latestDesc:'We continuously collect new free and open-source tools, practical alternatives and useful resources. Each tool is selected for usefulness, safety and real-world value.',submitTitle:'Submit a useful free tool',submitDesc:'Found a useful free, open-source or low-cost alternative? Submit it and we may add it after review.',footerTrust:'This website is a free tool sharing directory. We focus on official, open-source and free resources with no popups, no tricks and long-term updates.'},ja:{sideTitle:'カテゴリメニュー',eyebrow:'無料・オープンソース・高品質代替',heroTitle:'無料・オープンソース代替ツール集',heroDesc:'AI、デザイン、動画編集、PDF、仕事効率化、翻訳、開発ツールなど、無料・オープンソース・低コストの代替ツールを整理しています。学生、会社員、クリエイター、開発者に役立つ実用的な無料リソースを継続的に更新します。',slogan1:'有料ソフトを無料ツールで賢く代替',slogan2:'使いやすい高品質な代替ツール集',slogan3:'無料ツールで作業効率を向上',catTitle:'📂 クイックカテゴリ',catDesc:'AIツール | デザイン | 動画編集 | PDF | 翻訳 | 生産性 | 開発ツール',topTitle:'🔥 人気ツール TOP10',latestTitle:'🆕 最近追加されたツール',latestDesc:'最新の無料・オープンソースツールや便利な代替ソフトを継続的に収集し、実用性と安全性を重視して掲載しています。',submitTitle:'便利な無料ツールを投稿',submitDesc:'便利な無料・オープンソース・低コスト代替ツールを見つけたら、投稿してください。確認後に掲載します。',footerTrust:'本サイトは無料ツール共有ナビです。公式・無料・オープンソースのリソースを中心に、長期的に更新します。'},vi:{sideTitle:'Danh mục',eyebrow:'Miễn phí · Mã nguồn mở · Thay thế tốt',heroTitle:'Danh bạ công cụ miễn phí và mã nguồn mở',heroDesc:'FreeToolAlternative tổng hợp các công cụ miễn phí, mã nguồn mở và lựa chọn thay thế chi phí thấp cho AI, thiết kế, chỉnh sửa video, PDF, văn phòng, dịch thuật và lập trình. Phù hợp cho học sinh, nhân viên, nhà sáng tạo và lập trình viên.',slogan1:'Thay phần mềm trả phí bằng công cụ miễn phí',slogan2:'Tổng hợp lựa chọn thay thế tiết kiệm và hữu ích',slogan3:'Một nơi tìm công cụ miễn phí để tăng hiệu suất',catTitle:'📂 Danh mục nhanh',catDesc:'AI | Thiết kế | Video | PDF | Dịch thuật | Năng suất | Lập trình mã nguồn mở',topTitle:'🔥 Công cụ phổ biến TOP10',latestTitle:'🆕 Công cụ mới cập nhật',latestDesc:'Chúng tôi liên tục cập nhật các công cụ miễn phí, mã nguồn mở và lựa chọn thay thế hữu ích, ưu tiên tính thực tế và an toàn.',submitTitle:'Gửi công cụ miễn phí hữu ích',submitDesc:'Nếu bạn biết công cụ miễn phí, mã nguồn mở hoặc thay thế chi phí thấp, hãy gửi để chúng tôi xem xét thêm vào website.',footerTrust:'Website này là danh bạ chia sẻ công cụ miễn phí, tập trung vào tài nguyên chính thức, miễn phí và mã nguồn mở, không popup và cập nhật lâu dài.'}};
-const topTools=[
-{name:'Photopea',cat:'Design',desc:'网页端最强PS平替，专业修图设计免费使用',url:'https://www.photopea.com/'},
-{name:'Stirling PDF',cat:'PDF',desc:'全能免费PDF工具箱，合并、拆分、转换一站式搞定',url:'https://www.stirlingpdf.com/'},
-{name:'Penpot',cat:'Design',desc:'开源免费Figma平替，在线UI设计神器',url:'https://penpot.app/'},
-{name:'Shotcut',cat:'Video',desc:'零基础免费视频剪辑软件，功能强大易上手',url:'https://shotcut.org/'},
-{name:'Open WebUI',cat:'AI',desc:'本地部署AI聊天工具，安全免费无限制',url:'https://openwebui.com/'},
-{name:'LibreTranslate',cat:'Translate',desc:'开源免费多语言翻译工具，精准无广告',url:'https://libretranslate.com/'},
-{name:'LanguageTool',cat:'Writing',desc:'专业语法校对平替，写作纠错必备',url:'https://languagetool.org/'},
-{name:'GIMP',cat:'Design',desc:'专业级免费图像处理软件，绘画修图全能',url:'https://www.gimp.org/'},
-{name:'AppFlowy',cat:'Productivity',desc:'开源免费Notion平替，个人知识库管理',url:'https://www.appflowy.io/'},
-{name:'Kdenlive',cat:'Video',desc:'专业开源视频剪辑，自媒体必备免费工具',url:'https://kdenlive.org/'}];
-const latestTools=[topTools[1],topTools[4],topTools[5],topTools[8],topTools[9],topTools[2]];
-function renderTools(list, target){document.getElementById(target).innerHTML=list.map(t=>`<article class="tool-card" data-name="${t.name.toLowerCase()} ${t.cat.toLowerCase()} ${t.desc.toLowerCase()}"><span class="badge">${t.cat}</span><h3>${t.name}</h3><p>${t.desc}</p><a class="visit-btn" href="${t.url}" target="_blank" rel="noopener noreferrer">Visit Website</a></article>`).join('')}
-renderTools(topTools,'topTools');renderTools(latestTools,'latestTools');
-document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>{const lang=btn.dataset.lang;document.documentElement.lang=lang==='zh'?'zh-CN':lang;document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('active',b===btn));document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(i18n[lang]&&i18n[lang][key])el.textContent=i18n[lang][key];});}));
-document.getElementById('searchInput').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();document.querySelectorAll('.tool-card').forEach(card=>{card.style.display=card.dataset.name.includes(q)?'flex':'none';});});
+import { db } from './firebase.js';
+import { collection, getDocs, query, orderBy } from 'https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js';
+import { fallbackTools, i18n } from './tools-data.js';
+
+let currentLang = localStorage.getItem('fta_lang') || 'zh';
+let tools = [];
+let activeCategory = 'all';
+let lastSource = 'Firestore';
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+
+function t(k){ return (i18n[currentLang] || i18n.zh)[k] || i18n.zh[k] || k; }
+function esc(v){ return String(v ?? '').replace(/[&<>'"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m])); }
+function website(url){ return /^https?:\/\//i.test(url || '') ? url : '#'; }
+
+function applyLang(){
+  document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : currentLang;
+  $('[data-title]').textContent = t('title');
+  $('[data-subtitle]').textContent = t('subtitle');
+  $('[data-db]').textContent = t('db');
+  $('#searchInput').placeholder = t('search');
+  $$('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === currentLang));
+}
+
+async function loadTools(){
+  $('#status').textContent = t('loading');
+  try{
+    let snapshot;
+    try { snapshot = await getDocs(query(collection(db, 'tools'), orderBy('name'))); }
+    catch { snapshot = await getDocs(collection(db, 'tools')); }
+    tools = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    if(!tools.length){ tools = fallbackTools; lastSource = t('fallback'); }
+    else { lastSource = 'Firestore'; }
+  }catch(err){
+    console.warn(err);
+    tools = fallbackTools;
+    lastSource = t('fallback');
+  }
+  render();
+}
+
+function categories(){ return ['all', ...new Set(tools.map(x => x.category || 'Other'))]; }
+
+function renderCategories(){
+  const box = $('#categoryList');
+  box.innerHTML = categories().map(c => `<button class="cat-btn ${c===activeCategory?'active':''}" data-cat="${esc(c)}">${c==='all'?t('all'):esc(c)}</button>`).join('');
+  $$('.cat-btn').forEach(btn => btn.onclick = () => { activeCategory = btn.dataset.cat; render(); });
+}
+
+function renderTools(){
+  const q = ($('#searchInput').value || '').trim().toLowerCase();
+  const filtered = tools.filter(tool => {
+    const text = [tool.name, tool.category, tool.description, tool.type, tool.slug].join(' ').toLowerCase();
+    const catOk = activeCategory === 'all' || (tool.category || 'Other') === activeCategory;
+    return catOk && (!q || text.includes(q));
+  });
+  $('#status').textContent = `${lastSource} · ${filtered.length} tools`;
+  $('#toolGrid').innerHTML = filtered.map(tool => `
+    <article class="tool-card">
+      <div class="tool-top"><span class="badge">${esc(tool.type || tool.category || 'Tool')}</span>${tool.featured ? '<span class="featured">★</span>' : ''}</div>
+      <h3>${esc(tool.name)}</h3>
+      <p>${esc(tool.description)}</p>
+      <div class="meta">${esc(tool.category || 'Other')} · ${esc(tool.slug || '')}</div>
+      <div class="actions">
+        <a href="${esc(website(tool.website))}" target="_blank" rel="noopener noreferrer">${t('visit')}</a>
+        <a href="pages/${esc(tool.slug || 'tool')}.html">${t('detail')}</a>
+      </div>
+    </article>
+  `).join('') || `<p class="empty">${t('empty')}</p>`;
+}
+
+function render(){ applyLang(); renderCategories(); renderTools(); }
+
+$$('.lang-btn').forEach(btn => btn.onclick = () => { currentLang = btn.dataset.lang; localStorage.setItem('fta_lang', currentLang); render(); });
+$('#searchInput').addEventListener('input', renderTools);
+loadTools();
