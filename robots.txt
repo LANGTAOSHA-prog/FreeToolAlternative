@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://langtaosha-prog.github.io/FreeToolAlternative/sitemap.xml
