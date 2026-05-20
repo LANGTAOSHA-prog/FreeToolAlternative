@@ -3,37 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>FreeToolAlternative - Free Open Source Alternatives</title>
   <meta name="description" content="FreeToolAlternative collects free and open-source alternatives for AI, design, PDF, video, writing, translation and productivity tools.">
+  <meta name="keywords" content="free tools, open source alternatives, AI tools, PDF tools, design tools, productivity tools">
+
   <link rel="canonical" href="https://langtaosha-prog.github.io/FreeToolAlternative/">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- GitHub Pages 项目站必须用相对路径 -->
+  <link rel="stylesheet" href="./style.css?v=20260520">
 </head>
+
 <body>
 <header class="topbar">
-  <a class="brand" href="./"><span>◎</span><strong data-title>FreeToolAlternative</strong></a>
-  <nav><a href="#tools">Tools</a><a href="#categories">Categories</a><a href="#submit">Submit</a></nav>
-  <div class="langs"><button class="lang-btn active" data-lang="zh">中文</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="ja">日本語</button><button class="lang-btn" data-lang="vi">VI</button></div>
+  <a class="brand" href="./">
+    <span>◎</span>
+    <strong data-title>FreeToolAlternative</strong>
+  </a>
+
+  <nav>
+    <a href="#tools">Tools</a>
+    <a href="#categories">Categories</a>
+    <a href="#submit">Submit</a>
+  </nav>
+
+  <div class="langs">
+    <button class="lang-btn active" data-lang="zh">中文</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="ja">日本語</button>
+    <button class="lang-btn" data-lang="vi">VI</button>
+  </div>
 </header>
+
 <main class="layout">
-  <aside class="sidebar" id="categories"><h3>Categories</h3><div id="categoryList"></div></aside>
+  <aside class="sidebar" id="categories">
+    <h3>Categories</h3>
+    <div id="categoryList"></div>
+  </aside>
+
   <section class="content">
     <section class="hero">
       <p class="eyebrow">Open Source · Free Tools · Software Alternatives</p>
       <h1 data-title>FreeToolAlternative</h1>
       <p data-subtitle>免费开源工具与付费软件平替导航</p>
-      <div class="search"><input id="searchInput" type="search" placeholder="搜索工具、分类或关键词"></div>
+
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="搜索工具、分类或关键词">
+      </div>
     </section>
+
     <section class="panel" id="tools">
-      <div class="section-head"><h2 data-db>数据库动态工具</h2><span id="status">Loading...</span></div>
+      <div class="section-head">
+        <h2 data-db>数据库动态工具</h2>
+        <span id="status">Loading...</span>
+      </div>
+
       <div id="toolGrid" class="tool-grid"></div>
     </section>
+
     <section class="panel" id="submit">
       <h2>Submit a Tool</h2>
       <p>下一步可接入 Firestore submissions 集合，实现用户投稿。当前版本已完成 tools 动态读取。</p>
     </section>
   </section>
 </main>
-<footer>FreeToolAlternative · Built with GitHub Pages + Firebase Firestore</footer>
-<script type="module" src="app.js"></script>
+
+<footer>
+  FreeToolAlternative · Built with GitHub Pages + Firebase Firestore
+</footer>
+
+<!-- app.js 必须在仓库根目录 -->
+<script type="module" src="./app.js?v=20260520"></script>
 </body>
 </html>
