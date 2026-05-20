@@ -1,5 +1,5 @@
 export const fallbackTools = [
-  {name:'Photopea', slug:'photopea', category:'Design', website:'https://www.photopea.com/', featured:true, type:'Free', description:'Free online Photoshop alternative with PSD support.'},
+  {name:'Photopea', slug:'slug: "photoshop-alternative"', category:'Design', website:'https://www.photopea.com/', featured:true, type:'Free', description:'Free online Photoshop alternative with PSD support.'},
   {name:'Stirling PDF', slug:'stirling-pdf', category:'PDF', website:'https://www.stirlingpdf.com/', featured:true, type:'Open Source', description:'Open-source PDF toolbox for merge, split, convert and edit.'},
   {name:'Penpot', slug:'penpot', category:'Design', website:'https://penpot.app/', featured:true, type:'Open Source', description:'Open-source UI/UX design and prototyping tool.'},
   {name:'Shotcut', slug:'shotcut', category:'Video', website:'https://shotcut.org/', featured:true, type:'Open Source', description:'Free open-source cross-platform video editor.'},
