@@ -1,14 +1,14 @@
 export const fallbackTools = [
   {name:'Photopea', slug:'photoshop-alternative', category:'Design', website:'https://www.photopea.com/', featured:true, type:'Free', description:'Free online Photoshop alternative with PSD support.'},
-  {name:'Stirling PDF', slug:'stirling-pdf', category:'PDF', website:'https://www.stirlingpdf.com/', featured:true, type:'Open Source', description:'Open-source PDF toolbox for merge, split, convert and edit.'},
-  {name:'Penpot', slug:'penpot', category:'Design', website:'https://penpot.app/', featured:true, type:'Open Source', description:'Open-source UI/UX design and prototyping tool.'},
-  {name:'Shotcut', slug:'shotcut', category:'Video', website:'https://shotcut.org/', featured:true, type:'Open Source', description:'Free open-source cross-platform video editor.'},
-  {name:'Open WebUI', slug:'open-webui', category:'AI', website:'https://openwebui.com/', featured:true, type:'Open Source', description:'Self-hosted AI chat UI for local and remote LLMs.'},
-  {name:'LibreTranslate', slug:'libretranslate', category:'Translate', website:'https://libretranslate.com/', featured:true, type:'Open Source', description:'Open-source machine translation API and web app.'},
-  {name:'LanguageTool', slug:'languagetool', category:'Writing', website:'https://languagetool.org/', featured:true, type:'Open Source/Freemium', description:'Multilingual grammar and style checker.'},
-  {name:'GIMP', slug:'gimp', category:'Design', website:'https://www.gimp.org/', featured:true, type:'Open Source', description:'Professional open-source image editor.'},
-  {name:'AppFlowy', slug:'appflowy', category:'Productivity', website:'https://www.appflowy.io/', featured:true, type:'Open Source', description:'Open-source Notion alternative for notes and project management.'},
-  {name:'Kdenlive', slug:'kdenlive', category:'Video', website:'https://kdenlive.org/', featured:true, type:'Open Source', description:'Professional open-source video editor.'}
+  {name:'Stirling PDF', slug:'free-pdf-tools', category:'PDF', website:'https://www.stirlingpdf.com/', featured:true, type:'Open Source', description:'Open-source PDF toolbox for merge, split, convert and edit.'},
+  {name:'Penpot', slug:'figma-alternative', category:'Design', website:'https://penpot.app/', featured:true, type:'Open Source', description:'Open-source UI/UX design and prototyping tool.'},
+  {name:'Shotcut', slug:'capcut-alternative', category:'Video', website:'https://shotcut.org/', featured:true, type:'Open Source', description:'Free open-source cross-platform video editor.'},
+  {name:'Open WebUI', slug:'chatgpt-alternative', category:'AI', website:'https://openwebui.com/', featured:true, type:'Open Source', description:'Self-hosted AI chat UI for local and remote LLMs.'},
+  {name:'LibreTranslate', slug:'google-translate-alternative', category:'Translate', website:'https://libretranslate.com/', featured:true, type:'Open Source', description:'Open-source machine translation API and web app.'},
+  {name:'LanguageTool', slug:'grammarly-alternative', category:'Writing', website:'https://languagetool.org/', featured:true, type:'Open Source/Freemium', description:'Multilingual grammar and style checker.'},
+  {name:'GIMP', slug:'photoshop-alternative', category:'Design', website:'https://www.gimp.org/', featured:true, type:'Open Source', description:'Professional open-source image editor.'},
+  {name:'AppFlowy', slug:'notion-alternative', category:'Productivity', website:'https://www.appflowy.io/', featured:true, type:'Open Source', description:'Open-source Notion alternative for notes and project management.'},
+  {name:'Kdenlive', slug:'capcut-alternative', category:'Video', website:'https://kdenlive.org/', featured:true, type:'Open Source', description:'Professional open-source video editor.'}
 ];
 
 export const i18n = {
