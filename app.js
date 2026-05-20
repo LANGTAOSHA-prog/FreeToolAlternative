@@ -165,9 +165,17 @@ function renderTools() {
         </div>
 
         <div class="actions">
-          <a href="${esc(safeWebsite(tool.website))}" target="_blank" rel="noopener noreferrer">
-            ${t('visit')}
-          </a>
+  <a href="pages/${tool.slug}.html" class="secondary">
+    View Details
+  </a>
+
+  <a href="${escapeSafeWebsite(tool.website)}"
+     target="_blank"
+     rel="noopener noreferrer">
+    ${t('visit')}
+  </a>
+</div>
+       
 
           <a href="./pages/${esc(slug)}.html">
             ${t('detail')}
