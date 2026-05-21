@@ -149,6 +149,8 @@ function renderTools() {
 
   grid.innerHTML = filtered.map(tool => {
     const slug = safeSlug(tool.slug || tool.id || tool.name);
+    const detailUrl = `./pages/${esc(slug)}.html`;
+    const websiteUrl = esc(safeWebsite(tool.website));
 
     return `
       <article class="tool-card">
@@ -165,20 +167,12 @@ function renderTools() {
         </div>
 
         <div class="actions">
-  <a href="pages/${tool.slug}.html" class="secondary">
-    View Details
-  </a>
-
-  <a href="${escapeSafeWebsite(tool.website)}"
-     target="_blank"
-     rel="noopener noreferrer">
-    ${t('visit')}
-  </a>
-</div>
-       
-
-          <a href="./pages/${esc(slug)}.html">
+          <a href="${detailUrl}" class="secondary">
             ${t('detail')}
+          </a>
+
+          <a href="${websiteUrl}" target="_blank" rel="noopener noreferrer">
+            ${t('visit')}
           </a>
         </div>
       </article>
