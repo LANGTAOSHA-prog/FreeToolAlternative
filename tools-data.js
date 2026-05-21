@@ -1,15 +1,5 @@
 export const fallbackTools = [
-  {name:'Photopea', slug:'photoshop-alternative', category:'Design', website:'https://www.photopea.com/', featured:true, type:'Free', description:'Free online Photoshop alternative with PSD support.'},
-  {name:'Stirling PDF', slug:'free-pdf-tools', category:'PDF', website:'https://www.stirlingpdf.com/', featured:true, type:'Open Source', description:'Open-source PDF toolbox for merge, split, convert and edit.'},
-  {name:'Penpot', slug:'figma-alternative', category:'Design', website:'https://penpot.app/', featured:true, type:'Open Source', description:'Open-source UI/UX design and prototyping tool.'},
-  {name:'Shotcut', slug:'capcut-alternative', category:'Video', website:'https://shotcut.org/', featured:true, type:'Open Source', description:'Free open-source cross-platform video editor.'},
-  {name:'Open WebUI', slug:'chatgpt-alternative', category:'AI', website:'https://openwebui.com/', featured:true, type:'Open Source', description:'Self-hosted AI chat UI for local and remote LLMs.'},
-  {name:'LibreTranslate', slug:'google-translate-alternative', category:'Translate', website:'https://libretranslate.com/', featured:true, type:'Open Source', description:'Open-source machine translation API and web app.'},
-  {name:'LanguageTool', slug:'grammarly-alternative', category:'Writing', website:'https://languagetool.org/', featured:true, type:'Open Source/Freemium', description:'Multilingual grammar and style checker.'},
-  {name:'GIMP', slug:'photoshop-alternative', category:'Design', website:'https://www.gimp.org/', featured:true, type:'Open Source', description:'Professional open-source image editor.'},
-  {name:'AppFlowy', slug:'notion-alternative', category:'Productivity', website:'https://www.appflowy.io/', featured:true, type:'Open Source', description:'Open-source Notion alternative for notes and project management.'},
-  {name:'Kdenlive', slug:'capcut-alternative', category:'Video', website:'https://kdenlive.org/', featured:true, type:'Open Source', description:'Professional open-source video editor.'}
-];
+ ];
 
 export const i18n = {
   zh:{title:'FreeToolAlternative', subtitle:'免费开源工具与付费软件平替导航', search:'搜索工具、分类或关键词', all:'全部', visit:'打开官网', detail:'查看详情', db:'数据库动态工具', fallback:'本地备用内容', loading:'正在读取 Firestore 数据库...', empty:'暂无数据，请先在 Firestore 的 tools 集合添加工具。'},
