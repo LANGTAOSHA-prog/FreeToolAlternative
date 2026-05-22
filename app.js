@@ -1,17 +1,9 @@
-import { db } from './firebase.js';
-import {
-  collection,
-  getDocs,
-  query,
-  orderBy
-} from 'https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js';
-
 import { fallbackTools, i18n } from './tools-data.js';
 
 let currentLang = localStorage.getItem('fta_lang') || 'zh';
 let tools = [];
 let activeCategory = 'all';
-let lastSource = 'Firestore';
+let lastSource = 'Google Sheets';
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => Array.from(document.querySelectorAll(s));
@@ -38,13 +30,30 @@ function safeSlug(slug) {
   return String(slug || 'tool')
     .trim()
     .toLowerCase()
-    .replace(/[^a-z0-9-]/g, '-');
+    .replace(/[^a-z0-9-]/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+function normalizeTool(tool) {
+  return {
+    url: tool.url || '',
+    name: tool.name || '',
+    slug: safeSlug(tool.slug || tool.name),
+    category: tool.category || 'Other',
+    description: tool.description || '',
+    website: tool.website || '#',
+    featured: String(tool.featured).toLowerCase() === 'true',
+    status: String(tool.status || '').toLowerCase()
+  };
 }
 
 function applyLang() {
   document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : currentLang;
 
-  $$('[data-title]').forEach(el => el.textContent = t('title'));
+  $$('[data-title]').forEach(el => {
+    el.textContent = t('title');
+  });
 
   const subtitle = $('[data-subtitle]');
   if (subtitle) subtitle.textContent = t('subtitle');
@@ -65,30 +74,32 @@ async function loadTools() {
   if (status) status.textContent = t('loading');
 
   try {
-    let snapshot;
+    const res = await fetch('./data/tools.json?v=' + Date.now(), {
+      cache: 'no-store'
+    });
 
-    try {
-      snapshot = await getDocs(
-        query(collection(db, 'tools'), orderBy('name'))
-      );
-    } catch (e) {
-      snapshot = await getDocs(collection(db, 'tools'));
+    if (!res.ok) {
+      throw new Error('tools.json load failed');
     }
 
-    tools = snapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    }));
+    const data = await res.json();
+
+    tools = Array.isArray(data)
+      ? data
+          .map(normalizeTool)
+          .filter(tool => tool.name && tool.slug)
+          .filter(tool => tool.status === 'published')
+      : [];
+
+    lastSource = 'Google Sheets';
 
     if (!tools.length) {
       tools = fallbackTools || [];
       lastSource = t('fallback');
-    } else {
-      lastSource = 'Firestore';
     }
 
   } catch (err) {
-    console.warn('Firestore load failed:', err);
+    console.warn('tools.json load failed:', err);
     tools = fallbackTools || [];
     lastSource = t('fallback');
   }
@@ -127,9 +138,8 @@ function renderTools() {
       tool.name,
       tool.category,
       tool.description,
-      tool.type,
       tool.slug,
-      tool.keywords
+      tool.website
     ].join(' ').toLowerCase();
 
     const catOk =
@@ -148,14 +158,14 @@ function renderTools() {
   if (!grid) return;
 
   grid.innerHTML = filtered.map(tool => {
-    const slug = safeSlug(tool.slug || tool.id || tool.name);
-    const detailUrl = `./pages/${esc(slug)}.html`;
+    const slug = safeSlug(tool.slug || tool.name);
+    const detailUrl = tool.url || `./pages/${esc(slug)}.html`;
     const websiteUrl = esc(safeWebsite(tool.website));
 
     return `
       <article class="tool-card">
         <div class="tool-top">
-          <span class="badge">${esc(tool.type || tool.category || 'Tool')}</span>
+          <span class="badge">${esc(tool.category || 'Tool')}</span>
           ${tool.featured ? '<span class="featured">★</span>' : ''}
         </div>
 
@@ -167,7 +177,7 @@ function renderTools() {
         </div>
 
         <div class="actions">
-          <a href="${detailUrl}" class="secondary">
+          <a href="${esc(detailUrl)}" class="secondary">
             ${t('detail')}
           </a>
 
