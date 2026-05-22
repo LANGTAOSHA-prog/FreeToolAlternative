@@ -79,7 +79,7 @@ async function loadTools() {
     });
 
     if (!res.ok) {
-      throw new Error('tools.json load failed');
+      throw new Error('data/tools.json load failed');
     }
 
     const data = await res.json();
@@ -99,7 +99,7 @@ async function loadTools() {
     }
 
   } catch (err) {
-    console.warn('tools.json load failed:', err);
+    console.warn('data/tools.json load failed:', err);
     tools = fallbackTools || [];
     lastSource = t('fallback');
   }
