@@ -1,4 +1,4 @@
-const SHEET_ID = '把这里换成你的Google表格ID';
+const SHEET_ID = '1oiP-J_0bqZpq8c77p-dn8xpg1H3GqlaY';
 const SHEET_NAME = 'tools';
 
 let tools = [];
