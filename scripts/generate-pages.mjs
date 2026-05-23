@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1a6Yhiz5poFt6kjUr7AzF9wW0YkIgFqnLSySVKKd_gwA/edit?usp=sharing";
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSApIyBhFDXXWPWNtPBUKYQXGjGcfJql_LhWgsfPeMB8blj_2tFDa_o_yHxkUedj-ADOg3nfboJb6NW/pub?gid=98810460&single=true&output=csv";
 const SITE_URL = "https://langtaosha-prog.github.io/FreeToolAlternative";
 
 const rootDir = process.cwd();
