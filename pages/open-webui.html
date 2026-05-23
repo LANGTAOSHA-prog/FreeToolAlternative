@@ -3,13 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Open WebUI - AI Tool | FreeToolAlternative</title>
-  <meta name="description" content="Self-hosted AI chat UI for local and remote LLMs.">
+  <title>Open WebUI - AI | FreeToolAlternative</title>
+  <meta name="description" content="">
   <link rel="canonical" href="https://langtaosha-prog.github.io/FreeToolAlternative/pages/open-webui.html">
-  <meta property="og:title" content="Open WebUI - FreeToolAlternative">
-  <meta property="og:description" content="Self-hosted AI chat UI for local and remote LLMs.">
+  <meta property="og:title" content="Open WebUI - AI | FreeToolAlternative">
+  <meta property="og:description" content="">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .lang-switcher {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .lang-switcher button {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.08);
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .lang-switcher button.active {
+      background: #2563eb;
+      color: #fff;
+      border-color: #2563eb;
+    }
+
+    [data-lang] {
+      display: none;
+    }
+
+    [data-lang].active {
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
@@ -18,65 +50,197 @@
   </header>
 
   <main class="page">
-    <a href="../index.html" class="back-link">← 返回首页 / Back Home</a>
+    <a href="../index.html" class="back-link">← Back Home</a>
 
-    <section class="hero">
-      <span class="badge">Open Source</span>
-      <h1>Open WebUI</h1>
-      <p class="subtitle">Self-hosted AI chat UI for local and remote LLMs.</p>
+    <div class="lang-switcher">
+      <button data-btn="zh" onclick="setLang('zh')">中文</button>
+      <button data-btn="en" onclick="setLang('en')">English</button>
+      <button data-btn="ja" onclick="setLang('ja')">日本語</button>
+      <button data-btn="vi" onclick="setLang('vi')">Tiếng Việt</button>
+    </div>
 
-      <div class="hero-actions">
-        <a class="btn" href="https://openwebui.com/" target="_blank" rel="noopener noreferrer">
-          打开官网 / Visit Official Website
-        </a>
-      </div>
+    
+    <section data-lang="zh">
+      <section class="hero">
+        <span class="badge">Open Source</span>
+        <h1>Open WebUI</h1>
+        <p class="subtitle"></p>
+
+        <div class="hero-actions">
+          <a class="btn" href="https://openwebui.com/" target="_blank" rel="noopener noreferrer">
+            打开官网
+          </a>
+        </div>
+      </section>
+
+      <section class="content">
+        <h2>一句话定位</h2>
+        <p></p>
+
+        <h2>Open WebUI 是什么？</h2>
+        <p></p>
+
+        <h2>核心功能</h2>
+        <ul>
+          
+        </ul>
+
+        <h2>对比优势</h2>
+        <ul>
+          
+        </ul>
+
+        <h2>缺点</h2>
+        <ul>
+          
+        </ul>
+
+        <h2>SEO关键词</h2>
+        <p></p>
+      </section>
     </section>
+  
+    
+    <section data-lang="en">
+      <section class="hero">
+        <span class="badge">Open Source</span>
+        <h1>Open WebUI</h1>
+        <p class="subtitle"></p>
 
-    <section class="content">
-      <h2>一句话定位</h2>
-      <p>Open WebUI 是一个适合 AI 场景的免费或开源工具，适合作为付费软件的低成本替代选择。</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://openwebui.com/" target="_blank" rel="noopener noreferrer">
+            Visit Official Website
+          </a>
+        </div>
+      </section>
 
-      <h2>What is Open WebUI?</h2>
-      <p>Self-hosted AI chat UI for local and remote LLMs.</p>
+      <section class="content">
+        <h2>Quick Summary</h2>
+        <p></p>
 
-      <h2>核心功能 / Main Features</h2>
-      <ul>
-        <li>AI chat interface</li>
-        <li>Local model support</li>
-        <li>Ollama support</li>
-        <li>Custom prompts</li>
-        <li>User management</li>
-      </ul>
+        <h2>What is Open WebUI?</h2>
+        <p></p>
 
-      <h2>适用人群 / Best For</h2>
-      <p>Developers, researchers and privacy-focused users who want a self-hosted ChatGPT-style interface.</p>
+        <h2>Main Features</h2>
+        <ul>
+          
+        </ul>
 
-      <h2>对比优势 / Pros</h2>
-      <ul>
-        <li>Open-source</li>
-        <li>Works with local models</li>
-        <li>Privacy-friendly</li>
-        <li>Flexible deployment</li>
-      </ul>
+        <h2>Pros</h2>
+        <ul>
+          
+        </ul>
 
-      <h2>缺点 / Cons</h2>
-      <ul>
-        <li>Requires basic setup knowledge</li>
-        <li>Performance depends on hardware and model</li>
-      </ul>
+        <h2>Cons</h2>
+        <ul>
+          
+        </ul>
 
-      <h2>使用小技巧 / Tips</h2>
-      <p>建议先从官方文档或入门教程开始，确认工具是否符合你的使用场景，再长期使用。</p>
-
-      <h2>SEO 长尾关键词</h2>
-      <p>Open WebUI tutorial, open source ChatGPT alternative, local AI chat, Ollama web UI</p>
-
-      <h2>更多推荐</h2>
-      <p>
-        返回首页查看更多免费开源工具和平替软件：
-        <a href="../index.html">FreeToolAlternative</a>
-      </p>
+        <h2>SEO Keywords</h2>
+        <p></p>
+      </section>
     </section>
+  
+    
+    <section data-lang="ja">
+      <section class="hero">
+        <span class="badge">Open Source</span>
+        <h1>Open WebUI</h1>
+        <p class="subtitle"></p>
+
+        <div class="hero-actions">
+          <a class="btn" href="https://openwebui.com/" target="_blank" rel="noopener noreferrer">
+            公式サイトを開く
+          </a>
+        </div>
+      </section>
+
+      <section class="content">
+        <h2>概要</h2>
+        <p></p>
+
+        <h2>Open WebUI とは？</h2>
+        <p></p>
+
+        <h2>主な機能</h2>
+        <ul>
+          
+        </ul>
+
+        <h2>メリット</h2>
+        <ul>
+          
+        </ul>
+
+        <h2>デメリット</h2>
+        <ul>
+          
+        </ul>
+
+        <h2>SEOキーワード</h2>
+        <p></p>
+      </section>
+    </section>
+  
+    
+    <section data-lang="vi">
+      <section class="hero">
+        <span class="badge">Open Source</span>
+        <h1>Open WebUI</h1>
+        <p class="subtitle"></p>
+
+        <div class="hero-actions">
+          <a class="btn" href="https://openwebui.com/" target="_blank" rel="noopener noreferrer">
+            Mở website chính thức
+          </a>
+        </div>
+      </section>
+
+      <section class="content">
+        <h2>Tóm tắt</h2>
+        <p></p>
+
+        <h2>Open WebUI là gì?</h2>
+        <p></p>
+
+        <h2>Tính năng chính</h2>
+        <ul>
+          
+        </ul>
+
+        <h2>Ưu điểm</h2>
+        <ul>
+          
+        </ul>
+
+        <h2>Nhược điểm</h2>
+        <ul>
+          
+        </ul>
+
+        <h2>Từ khóa SEO</h2>
+        <p></p>
+      </section>
+    </section>
+  
   </main>
+
+  <script>
+    function setLang(lang) {
+      localStorage.setItem('fta_detail_lang', lang);
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+
+      document.querySelectorAll('[data-lang]').forEach(section => {
+        section.classList.toggle('active', section.dataset.lang === lang);
+      });
+
+      document.querySelectorAll('[data-btn]').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.btn === lang);
+      });
+    }
+
+    const savedLang = localStorage.getItem('fta_detail_lang') || localStorage.getItem('fta_lang') || 'zh';
+    setLang(savedLang);
+  </script>
 </body>
 </html>
