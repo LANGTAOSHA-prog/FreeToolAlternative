@@ -1,4 +1,4 @@
-const SHEET_ID = '你的Google表格ID';
+const SHEET_ID = '1oiP-J_0bqZpq8c77p-dn8xpg1H3GqlaYID';
 const SHEET_NAME = 'tools';
 
 let currentLang = localStorage.getItem('fta_lang') || 'zh';
